@@ -9,6 +9,7 @@ The **PC1.DRV** file series documents a complete optimization journey from a bro
 ### Quick Start
 - **Production driver:** `PC1-7.asm` → Generates `PC1.DRV`
 - **Reference baseline:** `PC1-2.asm` (identical core algorithm, slightly different register allocation)
+- **320×200 experiment:** `PC1-8.asm` → CGA mode with V6355D palette cycling (too slow for gameplay)
 - **Educational variants:** `PC1-1` through `PC1-6` (each demonstrates an optimization failure)
 
 ---
@@ -225,12 +226,44 @@ See `PC1-OPTIMIZATION-ANALYSIS.md` for complete implementation template.
 
 ---
 
+### PC1-8.ASM — **320×200 CGA with V6355D Palette Adaptation (EXPERIMENTAL)**
+**Status:** ✗ Functional but impractical — too slow for interactive gameplay
+
+**Concept:**
+Renders SCI's 16-color EGA framebuffer at full 320×200 horizontal resolution using CGA mode 4 (2bpp). The Yamaha V6355D DAC is reprogrammed with the 3 most-used non-black colors from the current scene, overriding CGA's fixed cyan/magenta/white palette.
+
+**Why CGA palette flipping doesn't work on V6355D:**
+
+The V6355D maps CGA pixel values 0-3 to DAC entries depending on which BIOS palette and intensity is active (e.g., palette 1 high → entries 0, 11, 13, 15). Changing these colors requires writing all 16 DAC entries (32 bytes) — fast at ~100µs. But the real problem is **synchronization**: after reprogramming the DAC, the CGA pixel values already in VRAM were written with the old color mapping. A full-screen redraw (32KB read + 16KB write) is needed, taking ~200ms on the V40's 8-bit bus. There's no way to trigger a redraw from inside the SCI driver API — the engine controls when `update_rect` is called.
+
+**What was tried:**
+1. **Per-scanline palette streaming** (PC1-BMP3 technique) → Each `update_rect` blocked 16ms for VSYNC sync. SCI calls it dozens of times per frame → minutes to draw one screen.
+2. **On-the-fly palette build** → 68µs per scanline exceeded the ~52µs active display. Only 2 lines visible.
+3. **Global palette in update_rect** → Small rectangles (cursor, text) kept overriding the full-scene palette with wrong colors.
+4. **Palette analysis in show_cursor** → Not called during loading. Screen stayed black for minutes.
+5. **Keypress-triggered update** (final version) → Works for testing. Pressing space scans framebuffer, reprograms V6355D, and redraws. But proves the core issue: the 320×200 conversion pipeline is simply too slow for interactive SCI games on V40 @ 8MHz.
+
+**Key technical insights:**
+- CGA mode 4 uses DAC entries 0/3/5/7 (palette 1 low) and 0/11/13/15 (palette 1 high) — not consecutive entries. Custom colors must be written to ALL mapping positions (per PC1PAL.asm technique).
+- `cs xlatb` segment override enables reading the lookup table from CS while `lodsw` reads framebuffer from DS — eliminates the need for an intermediate row buffer.
+- The V6355D palette write sequence requires I/O delays (`jmp short $+2`) between port writes.
+
+**Why development stopped:**
+The SCI0 games are too slow to be playable on the Olivetti PC1 at 320×200. The V40 CPU at 8MHz with an 8-bit bus cannot convert 32KB of EGA framebuffer per frame fast enough. The 160×200 PC1-7 driver provides acceptable frame rates, and the palette technique works well for static images (PC1-BMP3). For interactive games, the hardware simply isn't fast enough.
+
+**Files:**
+- `PC1-8.asm` — Clean rewrite with keypress-triggered palette update (1757 bytes)
+- `PC1-8-streaming.asm` — Archived earlier version with per-scanline streaming attempts
+
+---
+
 ## Performance Comparison
 
 | Driver | Purpose | Rows/Update | FPS @ V40 | Notes |
 |--------|---------|-------------|----------|-------|
 | **PC1-2** | Baseline | ~30-40 (rect) | 4-5 FPS | ✓ Reference implementation |
 | **PC1-7** | Production | ~30-40 (rect) | 4-5 FPS | ✓ Ready for shake_screen |
+| **PC1-8** | 320×200 + palette | 200 (full) | ~1-2 FPS | ✗ Experimental, too slow |
 | PC1-1 | Prototype | N/A (broken) | — | ✗ Graphics broken |
 | PC1-1b | Debug | N/A (broken) | — | ✗ Keyboard broken |
 | PC1-3 | Full-screen | 200 | 2-3 FPS | ✗ Ignores rect params |
@@ -307,6 +340,9 @@ PC1-1 (broken) → PC1-1b (partially fixed) → PC1-2 (working!)
                     All 6 variants remain working for education
                     PC1-2 = reference implementation
                     PC1-7 = production (PC1-2 + bug fixes + shake support)
+
+                    PC1-8 = 320×200 CGA palette experiment (too slow)
+                    PC1-8-streaming = archived per-scanline streaming attempt
 ```
 
 Every variant works enough to run and visually demonstrate **why** it failed. PC1-2 and PC1-7 are the only ones you'd ship; the others are teaching material.
