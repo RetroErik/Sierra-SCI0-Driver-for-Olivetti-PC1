@@ -389,3 +389,10 @@ Every variant works enough to run and visually demonstrate **why** it failed. PC
 ## License
 
 These drivers are published under the GNU LGPL license, following the original PCPLUS.DRV by Benedikt Freisen.
+
+---
+
+## YouTube
+
+For more retro computing content, visit my YouTube channel **Retro Hardware and Software**:
+[https://www.youtube.com/@RetroErik](https://www.youtube.com/@RetroErik)
