@@ -18,13 +18,13 @@ The **PC1.DRV** file series documents a complete optimization journey from a bro
 
 *SCI0 games running on the Olivetti Prodest PC1 with the PC1.DRV driver:*
 
-![King's Quest 4 on PC1](KQ4-PC1.jpg)
+<img src="KQ4-PC1.jpg" width="60%" alt="King's Quest 4 on PC1">
 <br><em>King's Quest 4 — SCI0 on Olivetti Prodest PC1</em>
 
-![Police Quest 2 on PC1](PQ2a-PC1.jpg)
+<img src="PQ2a-PC1.jpg" width="60%" alt="Police Quest 2 on PC1">
 <br><em>Police Quest 2 — SCI0 on Olivetti Prodest PC1</em>
 
-![Police Quest 2 on PC1](PQ2b-PC1.jpg)
+<img src="PQ2b-PC1.jpg" width="60%" alt="Police Quest 2 on PC1">
 <br><em>Police Quest 2 — SCI0 on Olivetti Prodest PC1</em>
 
 ---
