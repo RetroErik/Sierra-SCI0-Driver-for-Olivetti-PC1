@@ -6,11 +6,26 @@ A complete archive of SCI 0 video driver development for the Olivetti Prodest PC
 
 The **PC1.DRV** file series documents a complete optimization journey from a broken PCPLUS port through six variants (each teaching a lesson in failure) to a production-ready driver. Every version is fully functional enough to assemble and test on real hardware.
 
+### 📥 [Download PC1.DRV — the only file you need to play SCI0 games on the PC1](PC1.DRV)
+
 ### Quick Start
 - **Production driver:** `PC1-7.asm` → Generates `PC1.DRV`
 - **Reference baseline:** `PC1-2.asm` (identical core algorithm, slightly different register allocation)
 - **320×200 experiment:** `PC1-8.asm` → CGA mode with V6355D palette cycling (too slow for gameplay)
 - **Educational variants:** `PC1-1` through `PC1-6` (each demonstrates an optimization failure)
+
+## Screenshots
+
+*SCI0 games running on the Olivetti Prodest PC1 with the PC1.DRV driver:*
+
+![King's Quest 4 on PC1](KQ4-PC1.jpg)
+<br><em>King's Quest 4 — SCI0 on Olivetti Prodest PC1</em>
+
+![Police Quest 2 on PC1](PQ2a-PC1.jpg)
+<br><em>Police Quest 2 — SCI0 on Olivetti Prodest PC1</em>
+
+![Police Quest 2 on PC1](PQ2b-PC1.jpg)
+<br><em>Police Quest 2 — SCI0 on Olivetti Prodest PC1</em>
 
 ---
 
