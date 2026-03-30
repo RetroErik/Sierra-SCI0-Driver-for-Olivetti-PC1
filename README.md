@@ -5,6 +5,7 @@ A video driver that lets you play **Sierra SCI0 adventure games** on the **Olive
 By **Retro Erik** — [YouTube: Retro Hardware and Software](https://www.youtube.com/@RetroErik)
 
 ![Olivetti Prodest PC1](https://img.shields.io/badge/Platform-Olivetti%20Prodest%20PC1-blue)
+![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-green)
 ![License](https://img.shields.io/badge/License-LGPL-green)
 
 ### 📥 [Download PC1.DRV — the only file you need](PC1.DRV)
@@ -28,23 +29,35 @@ By **Retro Erik** — [YouTube: Retro Hardware and Software](https://www.youtube
 
 *SCI0 games running on the Olivetti Prodest PC1 with the PC1.DRV driver:*
 
-<img src="Screenshots/KQ4%20intro%20pc1.drv.png" width="50%" alt="King's Quest 4 - Intro">
-<br><em>King's Quest 4 — Intro</em>
+<p>
+<em>King's Quest 4 — Intro</em><br>
+<img src="Screenshots/KQ4%20intro%20pc1.drv.png" width="60%" alt="King's Quest 4 - Intro">
+</p>
 
-<img src="Screenshots/KQ4%20pc1.drv.png" width="50%" alt="King's Quest 4">
-<br><em>King's Quest 4</em>
+<p>
+<em>King's Quest 4</em><br>
+<img src="Screenshots/KQ4%20pc1.drv.png" width="60%" alt="King's Quest 4">
+</p>
 
-<img src="Screenshots/PQ2%20Intro%20PC1.drv.png" width="50%" alt="Police Quest 2 - Intro">
-<br><em>Police Quest 2 — Intro</em>
+<p>
+<em>Police Quest 2 — Intro</em><br>
+<img src="Screenshots/PQ2%20Intro%20PC1.drv.png" width="60%" alt="Police Quest 2 - Intro">
+</p>
 
-<img src="Screenshots/PQ2%20entrance%20PC1.drv.png" width="50%" alt="Police Quest 2 - Entrance">
-<br><em>Police Quest 2 — Entrance</em>
+<p>
+<em>Police Quest 2 — Entrance</em><br>
+<img src="Screenshots/PQ2%20entrance%20PC1.drv.png" width="60%" alt="Police Quest 2 - Entrance">
+</p>
 
-<img src="Screenshots/PQ2%20car%20PC1.drv.png" width="50%" alt="Police Quest 2 - Car">
-<br><em>Police Quest 2 — Car</em>
+<p>
+<em>Police Quest 2 — Car</em><br>
+<img src="Screenshots/PQ2%20car%20PC1.drv.png" width="60%" alt="Police Quest 2 - Car">
+</p>
 
-<img src="Screenshots/PQ2%20PC1.drv.png" width="50%" alt="Police Quest 2">
-<br><em>Police Quest 2</em>
+<p>
+<em>Police Quest 2</em><br>
+<img src="Screenshots/PQ2%20PC1.drv.png" width="60%" alt="Police Quest 2">
+</p>
 
 ---
 

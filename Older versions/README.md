@@ -1,5 +1,10 @@
 # SCI Driver Development History
 
+By **Retro Erik** — [YouTube: Retro Hardware and Software](https://www.youtube.com/@RetroErik)
+
+![Olivetti Prodest PC1](https://img.shields.io/badge/Platform-Olivetti%20Prodest%20PC1-blue)
+![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-green)
+
 The complete optimization journey from a broken PCPLUS port through six variants (each teaching a lesson in failure) to a production-ready driver. Every version is fully functional enough to assemble and test on real hardware.
 
 ---
