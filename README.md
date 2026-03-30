@@ -28,14 +28,23 @@ By **Retro Erik** — [YouTube: Retro Hardware and Software](https://www.youtube
 
 *SCI0 games running on the Olivetti Prodest PC1 with the PC1.DRV driver:*
 
-<img src="KQ4-PC1.jpg" width="60%" alt="King's Quest 4 on PC1">
-<br><em>King's Quest 4 — SCI0 on Olivetti Prodest PC1</em>
+<img src="Screenshots/KQ4%20intro%20pc1.drv.png" width="50%" alt="King's Quest 4 - Intro">
+<br><em>King's Quest 4 — Intro</em>
 
-<img src="PQ2a-PC1.jpg" width="60%" alt="Police Quest 2 on PC1">
-<br><em>Police Quest 2 — SCI0 on Olivetti Prodest PC1</em>
+<img src="Screenshots/KQ4%20pc1.drv.png" width="50%" alt="King's Quest 4">
+<br><em>King's Quest 4</em>
 
-<img src="PQ2b-PC1.jpg" width="60%" alt="Police Quest 2 on PC1">
-<br><em>Police Quest 2 — SCI0 on Olivetti Prodest PC1</em>
+<img src="Screenshots/PQ2%20Intro%20PC1.drv.png" width="50%" alt="Police Quest 2 - Intro">
+<br><em>Police Quest 2 — Intro</em>
+
+<img src="Screenshots/PQ2%20entrance%20PC1.drv.png" width="50%" alt="Police Quest 2 - Entrance">
+<br><em>Police Quest 2 — Entrance</em>
+
+<img src="Screenshots/PQ2%20car%20PC1.drv.png" width="50%" alt="Police Quest 2 - Car">
+<br><em>Police Quest 2 — Car</em>
+
+<img src="Screenshots/PQ2%20PC1.drv.png" width="50%" alt="Police Quest 2">
+<br><em>Police Quest 2</em>
 
 ---
 
