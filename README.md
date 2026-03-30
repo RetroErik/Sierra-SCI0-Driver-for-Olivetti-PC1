@@ -5,7 +5,6 @@ A video driver that lets you play **Sierra SCI0 adventure games** on the **Olive
 By **Retro Erik** — [YouTube: Retro Hardware and Software](https://www.youtube.com/@RetroErik)
 
 ![Olivetti Prodest PC1](https://img.shields.io/badge/Platform-Olivetti%20Prodest%20PC1-blue)
-![License](https://img.shields.io/badge/License-CC%20BY--NC%204.0-green)
 ![License](https://img.shields.io/badge/License-LGPL-green)
 
 ### 📥 [Download PC1.DRV — the only file you need](PC1.DRV)
