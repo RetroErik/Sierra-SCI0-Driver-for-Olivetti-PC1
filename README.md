@@ -67,7 +67,10 @@ The driver uses the V6335D's built-in 16×16 hardware sprite for mouse cursor re
 
 Requires an **INT 33h mouse driver**:
 - **PC1 MOUSE.COM** (Simone Riminucci) — for the PC1's built-in mouse port
+- **[JOYMOUSE.COM](../PC1-Labs/drivers/joymouse/)** (Retro Erik) — for an Atari joystick on the PC1's DE-9 port. Scroll Lock toggles joystick mode on/off.
 - **CTMOUSE** — for RS-232 serial mouse
+
+Tested with JOYMOUSE.COM and Leisure Suit Larry 2 — joystick directions control the mouse cursor and fire button clicks, with full hardware sprite rendering.
 
 Without a mouse driver, games run keyboard-only (same as the original CGA driver without a mouse).
 
@@ -79,41 +82,41 @@ Without a mouse driver, games run keyboard-only (same as the original CGA driver
 
 <p>
 <em>Without PATCHFNT (thin Font 1 garbled by downsampling)</em><br>
-<img src="Screenshots/Without%20patch/KQ4%20pc1.drv.png" width="600" alt="King's Quest 4 - Without font patch">
+<img src="Screenshots/Without%20patch/KQ4%20pc1.drv.png" width="60%" alt="King's Quest 4 - Without font patch">
 </p>
 
 <p>
 <em>With PATCHFNT (all text uses bold Font 0)</em><br>
-<img src="Screenshots/KQ4%20PC1%20driver%20patched.png" width="600" alt="King's Quest 4 - With font patch">
+<img src="Screenshots/KQ4%20PC1%20driver%20patched.png" width="60%" alt="King's Quest 4 - With font patch">
 </p>
 
 ### Police Quest 2
 
 <p>
 <em>Police Quest 2 — Entrance</em><br>
-<img src="Screenshots/PQ2%20PC1%20driver%20patched%20-%20entrance.png" width="600" alt="Police Quest 2 - Entrance">
+<img src="Screenshots/PQ2%20PC1%20driver%20patched%20-%20entrance.png" width="60%" alt="Police Quest 2 - Entrance">
 </p>
 
 <p>
 <em>Police Quest 2 — Car Park</em><br>
-<img src="Screenshots/PQ2%20PC1%20driver%20patched%20-%20carpark.png" width="600" alt="Police Quest 2 - Car Park">
+<img src="Screenshots/PQ2%20PC1%20driver%20patched%20-%20carpark.png" width="60%" alt="Police Quest 2 - Car Park">
 </p>
 
 <p>
 <em>Police Quest 2 — Car</em><br>
-<img src="Screenshots/PQ2%20PC1%20driver%20patched%20-%20car.png" width="600" alt="Police Quest 2 - Car">
+<img src="Screenshots/PQ2%20PC1%20driver%20patched%20-%20car.png" width="60%" alt="Police Quest 2 - Car">
 </p>
 
 ### Leisure Suit Larry
 
 <p>
 <em>Leisure Suit Larry 2</em><br>
-<img src="Screenshots/LL2%20PC1%20driver%20patched.png" width="600" alt="Leisure Suit Larry 2">
+<img src="Screenshots/LL2%20PC1%20driver%20patched.png" width="60%" alt="Leisure Suit Larry 2">
 </p>
 
 <p>
 <em>Leisure Suit Larry 3</em><br>
-<img src="Screenshots/LL3%20PC1%20driver%20patched.png" width="600" alt="Leisure Suit Larry 3">
+<img src="Screenshots/LL3%20PC1%20driver%20patched.png" width="60%" alt="Leisure Suit Larry 3">
 </p>
 
 ---
